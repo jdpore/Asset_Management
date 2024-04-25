@@ -1,0 +1,15 @@
+.table td,
+.table th {
+  text-align: center;
+  margin-top: 0%;
+  white-space: nowrap;
+  background-color: white;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+}
