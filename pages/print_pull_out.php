@@ -84,7 +84,7 @@ include '../php/accountability_details.php';
                             <tbody>
                                 <?php
                                 // Query to get unique employee numbers
-                                $employee_number_query = "SELECT DISTINCT employee_number FROM accountability_details";
+                                $employee_number_query = "SELECT DISTINCT employee_number FROM pull_out_data";
                                 $employee_number_result = mysqli_query($conn, $employee_number_query);
 
                                 if ($employee_number_result) {
