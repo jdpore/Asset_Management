@@ -122,7 +122,7 @@ if (isset($_POST['print_pull_out'])) {
             <div class="container-fluid shadow-lg bg-body rounded p-5 h-100">
                 <div class="border-bottom row align-items-center mb-5 py-3">
                     <div class="col-6">
-                        <h1>Asset Full Out Receipt</h1>
+                        <h1>Asset Pull Out Receipt</h1>
                     </div>
                 </div>
                 <div class="row h-75 overflow-auto">
@@ -138,7 +138,7 @@ if (isset($_POST['print_pull_out'])) {
                                         </h4>
                                         <div class="col-sm-6 mx-auto">
                                             <div class="title text-center">
-                                                Asset Full Out Receipt
+                                                Asset Pull Out Receipt
                                             </div>
                                             <div class="subtitle text-center">
                                                 Management Information System
