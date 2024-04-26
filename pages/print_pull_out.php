@@ -119,6 +119,7 @@ include '../php/accountability_details.php';
                                                 echo '<td>
                                                         <form method="POST" action="../pages/pull_out_form.php">
                                                             <input type="hidden" name="date_pull_out" value="' . $control_number_row['date_pull_out'] . '">
+                                                            <input type="hidden" name="employee" value="' . $employee_number_data['employee_number'] . '">
                                                             <button type="submit" name="print_pull_out" class="edit-button btn btn-primary btn-sm" id="edit-button"><i class="fas fa-edit"></i></button>
                                                         </form>
                                                     </td>';

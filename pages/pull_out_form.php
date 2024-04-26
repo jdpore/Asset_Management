@@ -2,8 +2,10 @@
 include '../php/auto_redirect.php';
 if (isset($_POST['print_pull_out'])) {
     $date_pull_out = $_POST['date_pull_out'];
+    $employee = $_POST['employee'];
 
-    $pull_out_data_query = "SELECT * FROM pull_out_data WHERE date_pull_out = '$date_pull_out'";
+
+    $pull_out_data_query = "SELECT * FROM pull_out_data WHERE date_pull_out = '$date_pull_out' and employee_number = '$employee'";
     $pull_out_data_result = mysqli_query($conn, $pull_out_data_query);
     $pull_out_data = mysqli_fetch_assoc($pull_out_data_result);
 

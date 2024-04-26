@@ -94,7 +94,6 @@ include '../php/accountability_details.php';
                                     $asset_name = "SELECT * FROM inventory WHERE id = '" . $accountability_history_row['asset_id'] . "'";
                                     $asset_name_result = mysqli_query($conn, $asset_name);
                                     $asset_name_row = mysqli_fetch_assoc($asset_name_result);
-                                    echo $accountability_history_row['asset_id'];
                                     echo '<tr>';
                                     echo "<td>" . $asset_name_row['asset_name'] . "</td>";
                                     echo "<td><strong style='font-size: 0.8em;'>Category: </strong>" . $asset_name_row['asset_category'] . "<br><strong style='font-size: 0.8em;'>OS: </strong>" . $asset_name_row['asset_operating_system'] . "<br><strong style='font-size: 0.8em;'>Capacity: </strong>" . $asset_name_row['asset_storage'] . "<br><strong style='font-size: 0.8em;'>Version: </strong>" . $asset_name_row['asset_brand_model'] . "</td>";
