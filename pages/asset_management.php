@@ -380,7 +380,7 @@ include '../php/inventory_list.php';
         var edit_storage = document.getElementById('edit_asset_storage');
         var edit_ram = document.getElementById('edit_asset_ram');
         var edit_operating_system = document.getElementById('edit_asset_operating_system');
-        function edit_asset(asset_sticker_number) {
+        function edit_asset(id) {
             // Prevent the default form submission
             event.preventDefault();
 
@@ -424,7 +424,7 @@ include '../php/inventory_list.php';
                     // Populate other fields as needed
                 }
             };
-            xhr.send('asset_sticker_number=' + encodeURIComponent(asset_sticker_number));
+            xhr.send('id=' + encodeURIComponent(id));
         }
         function editToggleFields(category) {
             edit_processor.removeAttribute('disabled');

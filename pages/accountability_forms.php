@@ -93,11 +93,11 @@ include '../php/edit.php';
                                     <div class="form-floating col-md-12 mb-2">
                                         <select class="form-select" name="accountable_employee_number">
                                             <option disabled selected value="">Select Employee Name...</option>
-                                            <?php foreach ($employee_data_result as $employee_data_result_row) {
+                                            <?php foreach ($employee_data_result as $employee_data_result_row1) {
                                                 // Check if the current employee_number exists in user_data table
-                                                $employee_number = $employee_data_result_row['employee_number']; ?>
+                                                $employee_number = $employee_data_result_row1['employee_number']; ?>
                                                 <option value="<?php echo $employee_number ?>">
-                                                    <?php echo $employee_data_result_row['first_name'], " ", $employee_data_result_row['last_name'], " - ", $employee_data_result_row['branch'] ?>
+                                                    <?php echo $employee_data_result_row1['first_name'], " ", $employee_data_result_row1['last_name'], " - ", $employee_data_result_row1['branch'] ?>
                                                 </option>
                                             <?php } ?>
                                         </select>
@@ -110,8 +110,7 @@ include '../php/edit.php';
                                         <select class="form-select" name="asset" id="asset" onchange="updateTable()">
                                             <option disabled selected value="">Select Asset...</option>
                                             <?php foreach ($inventory_available_result as $inventory_available_result_row) { ?>
-                                                <option
-                                                    value="<?php echo $inventory_available_result_row['id'] ?>">
+                                                <option value="<?php echo $inventory_available_result_row['id'] ?>">
                                                     <?php echo $inventory_available_result_row['asset_name'], ' ', $inventory_available_result_row['asset_sticker_number'] ?>
                                                 </option>
                                             <?php } ?>

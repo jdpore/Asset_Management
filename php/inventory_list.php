@@ -20,12 +20,12 @@ $disposal_count_query = "SELECT COUNT(*) AS disposal_count FROM inventory WHERE 
 $disposal_count_result = mysqli_query($conn, $disposal_count_query);
 $disposal_count_row = mysqli_fetch_assoc($disposal_count_result);
 
-if (isset ($_POST['asset_sticker_number'])) {
-    $asset_sticker_number = $_POST['asset_sticker_number'];
+if (isset($_POST['id'])) {
+    $id = $_POST['id'];
 
     // Prepare SQL statement
-    $stmt = $conn->prepare("SELECT * FROM inventory WHERE asset_sticker_number = ?");
-    $stmt->bind_param("s", $asset_sticker_number);
+    $stmt = $conn->prepare("SELECT * FROM inventory WHERE id = ?");
+    $stmt->bind_param("s", $id);
 
     // Execute the query
     $stmt->execute();
