@@ -5,8 +5,11 @@ if (isset($_POST['print_pull_out'])) {
     $employee = $_POST['employee'];
 
 
-    $pull_out_data_query = "SELECT * FROM pull_out_data WHERE date_pull_out = '$date_pull_out' and employee_number = '$employee'";
-    $pull_out_data_result = mysqli_query($conn, $pull_out_data_query);
+    $pull_out_data_query = "SELECT * 
+                        FROM pull_out_data 
+                        WHERE date_pull_out = '$date_pull_out' 
+                            AND employee_number = '$employee' 
+                        GROUP BY asset_id";
     $pull_out_data = mysqli_fetch_assoc($pull_out_data_result);
 
     foreach ($pull_out_data_result as $pull_out_data_row) {
